@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/static/js/main.2b4acc38.chunk.js",
-    "main.js.map": "/static/js/main.2b4acc38.chunk.js.map",
+    "main.js": "/static/js/main.03839d0c.chunk.js",
+    "main.js.map": "/static/js/main.03839d0c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.70ba4468.js",
     "runtime-main.js.map": "/static/js/runtime-main.70ba4468.js.map",
     "static/js/2.aa2f3b61.chunk.js": "/static/js/2.aa2f3b61.chunk.js",
     "static/js/2.aa2f3b61.chunk.js.map": "/static/js/2.aa2f3b61.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.69dbc29451c2f3c7ce2e5c95ba747673.js": "/precache-manifest.69dbc29451c2f3c7ce2e5c95ba747673.js",
+    "precache-manifest.434a7e7d641cff8f3a2a96856816b585.js": "/precache-manifest.434a7e7d641cff8f3a2a96856816b585.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.aa2f3b61.chunk.js.LICENSE.txt": "/static/js/2.aa2f3b61.chunk.js.LICENSE.txt",
     "static/media/Px437_IBM_VGA8.ttf": "/static/media/Px437_IBM_VGA8.c9a42dc3.ttf",
     "static/media/b1_dbs.png": "/static/media/b1_dbs.9d7837c2.png",
-    "static/media/b1_dbs.jpg": "/static/media/b1_dbs.bb35a264.jpg",
+    "static/media/b1_dbs.jpg": "/static/media/b1_dbs.c9be935d.jpg",
+    "static/media/b2.jpg": "/static/media/b2.5d7edfbd.jpg",
     "static/media/b2.png": "/static/media/b2.7fdacd43.png",
-    "static/media/b2.jpg": "/static/media/b2.d068702b.jpg",
+    "static/media/b2_inner.jpg": "/static/media/b2_inner.053d6735.jpg",
     "static/media/b2_inner.png": "/static/media/b2_inner.1fd6fac5.png",
-    "static/media/b2_inner.jpg": "/static/media/b2_inner.85b7017b.jpg",
     "static/media/block-404.png": "/static/media/block-404.6af80659.png",
     "static/media/block-about.png": "/static/media/block-about.a0d41ab8.png",
     "static/media/block-changelog.png": "/static/media/block-changelog.e97a59a1.png",
@@ -25,16 +25,16 @@
     "static/media/block-favicon-clear.png": "/static/media/block-favicon-clear.185152a6.png",
     "static/media/block-home.png": "/static/media/block-home.1d466e53.png",
     "static/media/block-treasure.png": "/static/media/block-treasure.a772823f.png",
-    "static/media/campus.jpg": "/static/media/campus.2bc0eb81.jpg",
+    "static/media/campus.jpg": "/static/media/campus.388e7b04.jpg",
     "static/media/campus.png": "/static/media/campus.e75e6b7b.png",
     "static/media/clown.png": "/static/media/clown.19dab76e.png",
-    "static/media/library.jpg": "/static/media/library.1fe30ab5.jpg",
     "static/media/library.png": "/static/media/library.3929aa7f.png",
+    "static/media/library.jpg": "/static/media/library.aa9d9f81.jpg",
     "static/media/site-image.png": "/static/media/site-image.d06b8fee.png"
   },
   "entrypoints": [
     "static/js/runtime-main.70ba4468.js",
     "static/js/2.aa2f3b61.chunk.js",
-    "static/js/main.2b4acc38.chunk.js"
+    "static/js/main.03839d0c.chunk.js"
   ]
 }
