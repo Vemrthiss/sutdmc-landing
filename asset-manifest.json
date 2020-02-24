@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.109fff2c.chunk.js",
-    "main.js.map": "/static/js/main.109fff2c.chunk.js.map",
+    "main.js": "/static/js/main.f39625d2.chunk.js",
+    "main.js.map": "/static/js/main.f39625d2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.70ba4468.js",
     "runtime-main.js.map": "/static/js/runtime-main.70ba4468.js.map",
     "static/js/2.339eb913.chunk.js": "/static/js/2.339eb913.chunk.js",
     "static/js/2.339eb913.chunk.js.map": "/static/js/2.339eb913.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e6b9c98bcd4b4bf2279f110d3a5de5d8.js": "/precache-manifest.e6b9c98bcd4b4bf2279f110d3a5de5d8.js",
+    "precache-manifest.403cfad3d7a3ed6f0d4bcaf5fcbd39d5.js": "/precache-manifest.403cfad3d7a3ed6f0d4bcaf5fcbd39d5.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.339eb913.chunk.js.LICENSE.txt": "/static/js/2.339eb913.chunk.js.LICENSE.txt",
     "static/media/Px437_IBM_VGA8.ttf": "/static/media/Px437_IBM_VGA8.c9a42dc3.ttf",
@@ -35,6 +35,6 @@
   "entrypoints": [
     "static/js/runtime-main.70ba4468.js",
     "static/js/2.339eb913.chunk.js",
-    "static/js/main.109fff2c.chunk.js"
+    "static/js/main.f39625d2.chunk.js"
   ]
 }
