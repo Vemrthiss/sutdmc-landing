@@ -9,9 +9,17 @@ import Text from '../components/Text';
 const GamePhoto = styled.img`
     width: 70%;
     margin: 10px auto;
+
+    @media (max-width: 896px) {
+        width: 100%;
+    }
 `;
 
 const GamePageContent = styled.div`
+    & img {
+        display: block;
+    }
+
     font-family: var(--font-primary);
     font-size: 24px;
     line-height: 1.4;
@@ -32,7 +40,7 @@ const GamePageContent = styled.div`
 `;
 
 const GamePageList = styled.ul`
-    
+
 `;
 
 const GamePageTable = styled.table`
@@ -53,20 +61,24 @@ const gamePageSectionHeader = {
     textTransform: 'uppercase',
     fontSize: '30px',
     color: 'var(--color-accent)',
-    marginTop: '10px'
+    marginTop: '20px'
 }
 
 const ArticleRow = styled.div`
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;
 
     & > * {
-        width: 50%;
         margin: 0 16px;
     }
 
-    @media (max-width: 1008px) {
+    @media (max-width: 968px) {
+        & > * {
+            margin: 0;
+        }
+
+        display : flex;
         flex-direction: column;
 
         &:nth-child(even) {
@@ -76,15 +88,13 @@ const ArticleRow = styled.div`
 `;
 
 const ArticleImageDiv = styled.div`
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    align-self: center;
 `;
 
 const ArticleImage = styled.img`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(.5);
+    height: auto;
+    width: 100%;
 `;
 
 const treasureHuntMarkup = (
@@ -104,7 +114,6 @@ const treasureHuntMarkup = (
             <li>There will be 5 treasures hidden in different places of the school each day from 5 to 8 March 2021, for a total of 20 prizes.</li>
             <li>Prizes can only be redeemed by people <strong>currently residing</strong> in Singapore.</li>
             <li>Each player can only take one (1) prize book out of treasure chests (to redeem for themselves). <strong>Players who keep more than one prize book in their inventories will be disqualified.</strong></li>
-            <li>Players who keep more than one prize book in their inventories will be disqualified.</li>
         </GamePageList>
 
         <Text style={gamePageSectionHeader}>Treasure Status</Text>
@@ -112,7 +121,7 @@ const treasureHuntMarkup = (
         <GamePageTable>
             <GamePageTableRow>
                 <GamePageTableCell>Friday</GamePageTableCell>
-                <GamePageTableCell>Not Yet Placed</GamePageTableCell>
+                <GamePageTableCell>5/5 remaining!</GamePageTableCell>
             </GamePageTableRow>
             <GamePageTableRow>
                 <GamePageTableCell>Saturday</GamePageTableCell>
@@ -176,7 +185,7 @@ const speedBakersMarkup = (
                 <ArticleImage src={require('../assets/images/oh2021-games/speedbakers_4.png')}></ArticleImage>
             </ArticleImageDiv>
         </ArticleRow>
-        
+
 
         <Text style={gamePageSectionHeader}>Gameplay</Text>
 
@@ -218,10 +227,12 @@ const speedBakersMarkup = (
 
         <Text style={gamePageSectionHeader}>Rules</Text>
         <GamePageList>
-            <li>The game is open from Friday, 5 March, 9am to Monday, 8 March 5pm. At the end of the event, the top 5 scorers will be contacted to receive a prize.</li>
-            <li>If you would like to be considered for a prize, you must register your contact details<a style={{textDecoration: 'underline', margin: '0 10px'}} href={'https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPXTTmLO9afxItEje2XCt5nVUOEtKV0JHNDdHTzE2MUtYV0RPR1oxVU9QNyQlQCN0PWcu'}>in this form</a><em>before</em> the end of the event.</li>
-            <li>Only people <strong>currently residing</strong> in Singapore are eligible to claim the prize. If you are not residing in Singapore at the moment, you can still play the game.</li>
-            <li>SUTD reserves the right to change the prize subject to availability.</li>
+            <ul>
+                <li>The game is open from Saturday, 6 March, 9am to Monday, 8 March 5pm. At the end of the event, the top 5 scorers will be contacted to receive a prize.</li>
+                <li>If you would like to be considered for a prize, you must register your contact details<a style={{textDecoration: 'underline', margin: '0 10px'}} href={'https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPXTTmLO9afxItEje2XCt5nVUOEtKV0JHNDdHTzE2MUtYV0RPR1oxVU9QNyQlQCN0PWcu'}>in this form</a><em>before</em> the end of the event.</li>
+                <li>Only people <strong>currently residing</strong> in Singapore are eligible to claim the prize. If you are not residing in Singapore at the moment, you can still play the game.</li>
+                <li>SUTD reserves the right to change the prize subject to availability.</li>
+            </ul>
         </GamePageList>
     </GamePageContent>
 )
@@ -258,7 +269,7 @@ const GamePageComp = () => {
             <GamePhoto src={game.mainPhoto}></GamePhoto>
             {game.content}
         </PageBase>
-        
+
     );
 }
 

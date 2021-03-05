@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 import Link from "./components/Link";
 import menu from './assets/images/menu.png';
-import HeroImage from "./HeroImage";
+//import HeroImage from "./HeroImage";
 
 const NavLink = styled(Link)``;
 
 const Navbar = styled.ul`
   width: 50vw;
-  margin-left: 45vw;
   height: 45px;
   display: flex;
+  align-self: center;
   list-style: none;
   justify-content: space-evenly;
   font-family: var(--font-primary);
@@ -23,6 +23,7 @@ const Navbar = styled.ul`
     justify-content: center;
     align-items: center;
   }
+
   & a {
     width: 100%;
     height: 100%;
@@ -66,6 +67,8 @@ const Navbar = styled.ul`
 const NavElement = styled.nav`
   padding-top: 5vh;
   display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 
   @media (max-width: 896px) {
     padding-top: 0;
@@ -87,7 +90,8 @@ const NavDropdownContentDiv = `
     height: 30px;
     padding: 0 10px;
     color: black;
-    display: block;
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: var(--color-accent);
@@ -205,18 +209,6 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     };
   }, [isOpened]);
 
-  const navDropdownGames = (<ul>
-    <li><NavLink to="/epd">EPD</NavLink></li>
-    <li><NavLink to="/esd">ESD</NavLink></li>
-    <li><NavLink to="/istd">ISTD</NavLink></li>
-  </ul>)
-
-  const navDropdownProjects = (<ul>
-    <li><NavLink to="/project1">Project&nbsp;1</NavLink></li>
-    <li><NavLink to="/project2">Project&nbsp;2</NavLink></li>
-    <li><NavLink to="/project3">Project&nbsp;3</NavLink></li>
-  </ul>)
-
   const navDropdownArchives = (<ul>
     <li><NavLink to="/oh2020">Open&nbsp;House&nbsp;2020</NavLink></li>
     <li><NavLink to="/asd2020">ASD Projects</NavLink></li>
@@ -225,7 +217,7 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
   const navDropdownEvents = (<ul>
     <li><NavLink to="/oh2021">Open&nbsp;House&nbsp;2021</NavLink></li>
     <NavDropdown2>
-      <NavLink to="/">Archives</NavLink>
+      <div>Archives</div>
       <NavDropdownContent2>
         {navDropdownArchives}
       </NavDropdownContent2>
@@ -270,9 +262,40 @@ const NavbarComp = ({ blockCount, setBlockCount }) => {
     </li>
   </>)
 
+  const Logo = styled.img`
+    margin-left: 44px;
+    width: 72px;
+    height: 72px;
+
+    @media (max-width: 896px) {
+      margin-left: 0;
+      padding-top: 3px;
+      width: 42px;
+      height: 42px;
+    }
+  `;
+
+  const Title = styled.h1`
+    font-family: var(--font-primary);
+    color: var(--color-accent);
+    font-size: 48px;
+    line-height: 1.4;
+    margin-left: 25px;
+  `;
+
+  const NavBrand = styled.div`
+    display: flex;
+    width: 35vw;
+    align-items: center;
+  `;
+
   return (
     <NavElement>
-      <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} />
+      {/* <HeroImage blockCount={blockCount} setBlockCount={setBlockCount} /> */}
+      <NavBrand>
+        <Logo src={require('./assets/images/site-logo.png')}></Logo>
+        <Title>SUTD Minecraft</Title>
+      </NavBrand>
       {isOpened ?
         <Navbar><NavExpanded>{navList}</NavExpanded></Navbar>
       :
