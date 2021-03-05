@@ -6,7 +6,7 @@ import { Switch, Route } from "react-router-dom";
 // import About from "./pages/About";
 // import Elsewhere from "./pages/Elsewhere";
 import Error from "./pages/Error";
-// import ASDProjects from './pages/ASDProjects';
+import ASDProjects from './pages/ASDProjects';
 // import ASDProjectPage from './pages/ASDProjectPage';
 import GamePage from './pages/GamePage';
 import OH2021 from './pages/OH2021';
@@ -57,8 +57,8 @@ const ContentComp = () => {
           <GamePage />
         </Route>
         <Route exact path="/asd2020">
-          {/* <ASDProjects /> */}
-          <ComingSoon/>
+          <ASDProjects />
+          {/* <ComingSoon/> */}
         </Route>
         <Route exact path="/asd2020/:id">
           {/* <ASDProjectPage /> */}
