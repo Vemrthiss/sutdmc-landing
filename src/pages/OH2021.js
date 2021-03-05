@@ -6,7 +6,7 @@ import PageBanner from '../components/PageBanner';
 import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import FeatureCardSection from '../components/FeatureCardSection';
-import CTA from '../components/CTA';
+//import CTA from '../components/CTA';
 
 const gameCardDetails = {
     jth: {
@@ -29,10 +29,10 @@ const gameCardDetails = {
     }
 };
 
-const ASDBtnStyles = {
-    width: '50%',
-    margin: '0 auto'
-};
+// const ASDBtnStyles = {
+//     width: '50%',
+//     margin: '0 auto'
+// };
 
 const bannerText = (
     <>
