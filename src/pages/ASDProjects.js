@@ -18,19 +18,19 @@ const featureCardDetails = {
        title: 'Jurong Town Hall',
        href: '/asd2020/jurong_town_hall',
        imgSource: require('../assets/images/asd-landing/Jurong Town Hall.png'),
-       description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?'
+       description: 'Click to find out more'
     },
     theatre: {
         title: 'Theatre',
         href: '/asd2020/theatre',
         imgSource: require('../assets/images/asd-landing/National Theatre.png'),
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
+        description: 'Click to find out more' 
     },
     gallery: {
         title: 'National Design Centre',
         href: '/asd2020/design_centre',
         imgSource: require('../assets/images/asd-landing/National Design Centre.png'),
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, exercitationem neque magnam cum aliquam facilis error temporibus autem esse sequi odit, eum ratione est! Est culpa cumque obcaecati tempore at?' 
+        description: 'Click to find out more'
     }
 };
 
@@ -72,7 +72,7 @@ const ASDProjectsComp = () => {
             </PageBanner>
             <Text>In Summer 2020, 27 students from the 02.231 Conservation Theories and Approaches to Built Heritage module took to the blocky world of Minecraft as a challenge to distill the architecture design of buildings through a reductive thinking process. A total of 7 iconic local buildings were built as part of their coursework. Their builds now live in the SUTD Minecraft Server Network for the public to visit.</Text>
             
-            <Text style={sectionHeader}>Watch the Video</Text>
+            {/* <Text style={sectionHeader}>Watch the Video</Text> */}
 
             <Text style={sectionHeader}>The Buildings</Text>
             <Text style={underlineText}>Featured Builds</Text>
