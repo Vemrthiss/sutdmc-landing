@@ -15,10 +15,10 @@ function Campus(props) {
   const location = []
   const setMining = useContext(MiningContext);
   const [size, setSize] = useState(0);
-  const [expand,setExpand] = useState(false)
-  const [imgLink, setImgLink] = useState()
-  const [type,setType] = useState(false)
-  const ref = useRef(null)
+  const [expand,setExpand] = useState(false);
+  const [imgLink, setImgLink] = useState();
+  const [type,setType] = useState(true);
+  const ref = useRef(null);
 
   const handleClickOutside = event => {
     if (ref.current && !ref.current.contains(event.target)) {

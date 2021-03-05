@@ -13,7 +13,7 @@ import OH2021 from './pages/OH2021';
 
 import ComingSoon from './pages/ComingSoon';
 
-//import Campus from "./pages/Campus";
+import Campus from "./pages/Campus";
 
 
 const Content = styled.div`
@@ -65,8 +65,8 @@ const ContentComp = () => {
           <ComingSoon/>
         </Route>
         <Route exact path="/campus">
-          {/* <Campus/> */}
-          <ComingSoon/>
+          <Campus/>
+          {/* <ComingSoon/> */}
         </Route>
         <Route exact path="/oh2020">
           <ComingSoon/>
