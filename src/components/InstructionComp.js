@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "./Text";
 
-const InstructionComp = ({ children,stepNum, ...others }) => {
+const InstructionComp = ({ children,stepNum, asd, ...others }) => {
   const Instruction = styled.div`
     width:auto;
     height:auto;
@@ -17,7 +16,7 @@ const InstructionComp = ({ children,stepNum, ...others }) => {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 4rem;
-    justify-content: space-evenly;
+    ${asd ? 'justify-content: space-between;' :'justify-content: space-evenly;'}
     @media (max-width: 1025px) {
       margin-bottom: 2rem;
 
@@ -75,7 +74,10 @@ const InstructionComp = ({ children,stepNum, ...others }) => {
           <InstructionHeader>step {stepNum}</InstructionHeader>
           {children}
         </TextWrapper>
-        <StepImg src = {require(`../assets/images/visiting_guide/step${stepNum}.png`)}></StepImg>
+        {asd ? 
+        <StepImg src={require(`../assets/images/asd-landing/instructions/step_${stepNum}.png`)}></StepImg>:
+        <StepImg src = {require(`../assets/images/visiting_guide/step${stepNum}.png`)}></StepImg>}
+        
       </Step>
 
     </Instruction>

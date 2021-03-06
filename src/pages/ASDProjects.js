@@ -1,10 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import PageBase from "../components/PageBase";
 import PageHeader from "../components/PageHeader";
 import PageBanner from '../components/PageBanner';
 import Text from "../components/Text";
 import FeatureCardSection from '../components/FeatureCardSection';
+import Instruction from '../components/InstructionComp';
 
 const formattedBannerText = (
     <>
@@ -35,21 +37,28 @@ const featureCardDetails = {
 };
 
 const instructionDetails = {
-    step1: {
-        description: 'Step 1: Refer to instructions on [how to connect to our server network]'
-    },
     step2: {
-        description: 'Step 2: At the entrance to the grand hall with the SUTD logo, turn left to follow a grass path',
-        imgSource: require('../assets/images/asd-landing/instructions/step_2.png')
+        description: 'At the entrance to the grand hall with the SUTD logo, turn left to follow a grass path',
+        step: 2
     },
     step3: {
-        description: 'Step 3: You will be greeted by a Chinatown-esque gate with shophouses lined up behind it.',
-        imgSource: require('../assets/images/asd-landing/instructions/step_3.png')
+        description: 'You will be greeted by a Chinatown-esque gate with shophouses lined up behind it.',
+        step: 3
     },
     step4: {
-        description: 'Step 4: Enter the portal of each of the houses to visit their location in game. You have the ability to fly in these worlds.',
-        imgSource: require('../assets/images/asd-landing/instructions/step_4a.png')
+        description: 'Enter the portal of each of the houses to visit their location in game. You have the ability to fly in these worlds.',
+        step: 4
     },
+}
+
+const instructionsList = [];
+
+for (const instructionObj of Object.values(instructionDetails)) {
+    instructionsList.push(
+        <Instruction asd stepNum={instructionObj.step}>
+            <Text>{instructionObj.description}</Text>
+        </Instruction>
+    );
 }
 
 const sectionHeader = {
@@ -58,6 +67,40 @@ const sectionHeader = {
     color: 'var(--color-accent)',
     marginTop: '20px'
 }
+
+const InstructionHeader = styled.h3`
+    font-family: var(--font-primary);
+    line-height: 1.4;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 30px;
+
+    @media (max-width: 1200px) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 896px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 18px;
+    }
+`;
+
+const InstructionWrapper = styled.div`
+    width: auto;
+    height: auto;
+`;
+
+const SingularPhoto = styled.img`
+    width: 70%;
+    margin: 10px auto;
+
+    @media (max-width: 896px) {
+        width: 100%;
+    }
+`;
 
 const underlineText = {textDecoration: 'underline'}
 
@@ -83,6 +126,12 @@ const ASDProjectsComp = () => {
         
             <Text style={sectionHeader}>Visit Us</Text>
             <Text style={underlineText}>Visiting it ingame</Text>
+            <InstructionHeader>Step 1</InstructionHeader>
+            <Text style={noMarginTop}>Refer to instructions on <a href="/campus" style={underlineText}>how to connect to our server network</a></Text>
+            <InstructionWrapper>
+                {instructionsList}
+            </InstructionWrapper>
+            <SingularPhoto src={require('../assets/images/asd-landing/instructions/step_4b.png')}></SingularPhoto>
 
 
             <Text style={underlineText}>Visit in your browser</Text>

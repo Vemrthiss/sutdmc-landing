@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect, useEffect,useContext,useRef } from "react";
 import ReactCompareImage from "react-compare-image";
 import PageHeader from "../components/PageHeader";
-import PageBanner from "../components/PageBanner";
+// import PageBanner from "../components/PageBanner";
 import PageBase from "../components/PageBase";
 import CTAbtn from "../components/CTAbtn";
 import styled from "styled-components";
@@ -155,12 +155,12 @@ function Campus(props) {
         </FullImg>
       </FullImgBg>}
       <PageHeader>SUTD MINECRAFT</PageHeader>
-      <PageBanner></PageBanner>
+      {/* <PageBanner></PageBanner> */}
       <BtnWraper>
 
         <CTAbtn selectUserType={()=>{change(true)}}>View in Minecraft</CTAbtn>
         <CTA href={'https://sutdmc-map.opensutd.org/open_house/?worldname=open_house&mapname=iso_ne&zoom=4&x=-101&y=64&z=35'} style={{margin:'10px'}} target={'_blank'}>View in Browser</CTA>
-        <CTAbtn selectUserType={()=>{change(false)}}>View Photos</CTAbtn>
+        {/* <CTAbtn selectUserType={()=>{change(false)}}>View Photos</CTAbtn> */}
       </BtnWraper>
       {type ?
         <InstructionWrapper>

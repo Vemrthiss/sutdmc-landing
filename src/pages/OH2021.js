@@ -6,7 +6,7 @@ import PageBanner from '../components/PageBanner';
 import SubHeader from "../components/SubHeader";
 import Text from "../components/Text";
 import FeatureCardSection from '../components/FeatureCardSection';
-//import CTA from '../components/CTA';
+import CTA from '../components/CTA';
 
 const gameCardDetails = {
     jth: {
@@ -29,10 +29,10 @@ const gameCardDetails = {
     }
 };
 
-// const ASDBtnStyles = {
-//     width: '50%',
-//     margin: '0 auto'
-// };
+const ASDBtnStyles = {
+    width: '50%',
+    margin: '0 auto'
+};
 
 const bannerText = (
     <>
@@ -76,8 +76,8 @@ const OH2021Comp = () => {
             <SubHeader>Games</SubHeader>
             <Text style={sectionText}>Starbucks, GV and Gong Cha vouchers to be won, first come first serve!</Text>
             <FeatureCardSection cardDetails={gameCardDetails}></FeatureCardSection>
-            {/* <Text style={sectionHeaders}>View our ASD Projects</Text>
-            <CTA href="/asd2020" style={ASDBtnStyles}>ASD Projects</CTA> */}
+            <SubHeader >View our ASD Projects</SubHeader>
+            <CTA href="/asd2020" style={ASDBtnStyles}>ASD Projects</CTA>
         </PageBase>
     )
 }
